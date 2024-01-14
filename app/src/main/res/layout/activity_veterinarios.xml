@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VeterinariosActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="450dp"
+        android:layout_height="66dp"
+        android:background="#0C8A89">
+
+        <ImageView
+            android:id="@+id/logoVet"
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/docvet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EEFAFD"
+        android:paddingVertical="10sp"
+        android:text="Busque o Veterinário ideal para o seu Pet"
+        android:textAlignment="center"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EEFAFD"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5sp">
+
+        <SearchView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EEFAFD"
+            android:queryHint="Pesquise pelo nome..." />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="#19A8A7"
+            android:text="Pesquisar" />
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <ListView
+        android:id="@+id/listVeterinarios"
+        android:layout_width="match_parent"
+        android:layout_height="518dp"
+        android:paddingHorizontal="15sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#19A8A7"
+        android:paddingHorizontal="0sp"
+        android:paddingBottom="0sp"
+        android:text="Ir para os Filtros"
+        android:visibility="visible"
+        app:cornerRadius="10sp"
+        app:icon="@drawable/filtro"
+        app:iconGravity="textEnd"
+        app:iconSize="20dp" />
+
+</LinearLayout>
